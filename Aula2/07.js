@@ -71,9 +71,11 @@ function voltarCarrossel() {
   imgs.unshift(first);
   const display = imgs[0];
 
-  const imagem = document.querySelector("img");
+  const imagem = document.getElementById("current");
   imagem.src = display;
   imagem.alt = "Imagem";
+
+  setPreview();
 }
 
 function seguirCarrossel() {
@@ -81,9 +83,25 @@ function seguirCarrossel() {
   imgs.push(first);
   const display = imgs[0];
 
-  const imagem = document.querySelector("img");
+  const imagem = document.getElementById("current");
   imagem.src = display;
   imagem.alt = "Imagem";
+
+  setPreview();
+}
+
+function setPreview() {
+  const arrSize = imgs.length;
+  const preview = imgs[arrSize - 1];
+  const postView = imgs[1];
+
+  const before = document.getElementById("before");
+  before.src = preview;
+  before.alt = "before";
+
+  const next = document.getElementById("next");
+  next.src = postView;
+  next.alt = "next";
 }
 
 function carrosselNavigation(key) {

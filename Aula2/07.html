@@ -6,6 +6,10 @@
     <title>H1 Carrossel</title>
   </head>
   <style>
+    img {
+      border-radius: 14px;
+      margin: 4px;
+    }
     button {
       border: none;
       padding: 8px;
@@ -15,6 +19,9 @@
       color: #000;
       border-radius: 14px;
       margin: 4px;
+    }
+    .changeButton {
+      height: 100px;
     }
     body {
       width: 90%;
@@ -27,33 +34,36 @@
     .img {
       display: flex;
       justify-content: center;
-    }
-    #before {
-      width: 300px;
-      height: 150px;
-    }
-    #next {
-      width: 300px;
-      height: 150px;
-    }
-    .switch {
-      margin-top: 10px;
+      align-items: center;
     }
     #current {
       width: 600px;
       height: 300px;
+    }
+    #before {
+      width: 300px;
+      height: 150px;
+      opacity: 0.5;
+    }
+    #next {
+      width: 300px;
+      height: 150px;
+      opacity: 0.5;
+    }
+    .switch {
+      margin-top: 10px;
     }
   </style>
   <script src="07.js"></script>
   <body>
     <h1>Carrossel</h1>
     <div class="img">
-      <button id="voltar"><</button>
+      <button class="changeButton" id="voltar"><</button>
       <img src="" alt="" id="before" />
       <img src="" alt="" id="current" />
       <img src="" alt="" id="next" />
 
-      <button id="proxima">></button>
+      <button class="changeButton" id="proxima">></button>
     </div>
     <button class="switch">switch</button>
   </body>
