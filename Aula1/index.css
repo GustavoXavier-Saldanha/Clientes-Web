@@ -1,0 +1,26 @@
+
+header{
+    width: 100;
+    height: 50px;
+    background-color: burlywood;
+}
+
+footer{
+    width: 100;
+    height: 50px;
+    background-color: burlywood;
+}
+
+aside{
+ width: 100px;
+ background-color: antiquewhite;
+}
+
+.container {
+  font: 22;
+  margin: 24px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: bisque;
+}
+

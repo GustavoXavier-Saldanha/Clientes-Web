@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>H1 Carrossel</title>
+  </head>
+  <style>
+    button {
+      border: none;
+      padding: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      background-color: rgb(60, 185, 137);
+      color: #000;
+      border-radius: 14px;
+      margin: 4px;
+    }
+    body {
+      width: 90%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .img {
+      display: flex;
+      justify-content: center;
+    }
+    #before {
+      width: 300px;
+      height: 150px;
+    }
+    #next {
+      width: 300px;
+      height: 150px;
+    }
+    .switch {
+      margin-top: 10px;
+    }
+    #current {
+      width: 600px;
+      height: 300px;
+    }
+  </style>
+  <script src="07.js"></script>
+  <body>
+    <h1>Carrossel</h1>
+    <div class="img">
+      <button id="voltar"><</button>
+      <img src="" alt="" id="before" />
+      <img src="" alt="" id="current" />
+      <img src="" alt="" id="next" />
+
+      <button id="proxima">></button>
+    </div>
+    <button class="switch">switch</button>
+  </body>
+</html>
