@@ -1,0 +1,31 @@
+JOGO DA MEMÓRIA
+
+Crie um jogo da memória para cores, que mostre uma sequência de cores
+que o usuário deve adivinhar. O jogo pode conter uma interface como a abaixo:
+
+Velocidade: [_______]
+[Iniciar]
+
+Fase: 1
++-------------------------+
+|                         |
++-------------------------+
+Resposta:
+[  ] [  ] [  ] ... [  ]
+Cores:
++-------------------------+
+|                         |
++-------------------------+
+[Confirmar]
+
+Faça com que ao iniciar o jogo, as cores sejam exibidas durante o tempo
+especificado em "Velocidade" e então trocadas. Na Fase 1, apenas 3 cores
+devem ser exibidas. Na Fase 2, 4 cores. E assim por diante.
+Se o usuário acertar, o jogo deve mudar de fase.
+Para jogar, o usuário deve clicar nos botões que equivalham à sequência
+de cores exibidas. Esses botões só podem ser exibidos para o usuário após
+todas as cores forem exibidas.
+Ao clicar em um botão, a cor correspondente deve ser acrescentada na lista
+de cores.
+Apenas quando o usuário clicar na opção "Confirmar", a jogada deve ser
+realizada.

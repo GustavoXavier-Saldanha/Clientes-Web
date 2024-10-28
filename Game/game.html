@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória com Cores</title>
+    <script src="game.js" ></script>
+</head>
+<body>
+    <label for="velocidade">Velocidade:</label>
+    <input type="number" id="velocidade" step="500" value="1000" />
+    <button id="iniciar">Iniciar</button>
+    <label>Fase: </label>
+    <div id="fase" ></div>
+    <div id="cor" ></div>
+    <div id="resposta" >
+        <label>Resposta:</label>
+        <button accesskey="1" >1</button>
+        <button accesskey="2" >2</button>
+        <button accesskey="3" >3</button>
+        <button accesskey="4" >4</button>
+        <button accesskey="5" >5</button>
+        <button accesskey="6" >6</button>
+        <button accesskey="7" >7</button>
+        <button accesskey="8" >8</button>
+        <button accesskey="9" >9</button>
+        <button accesskey="0" >10</button>
+        <label for="cores" >Cores:</label>
+        <textarea id="cores"></textarea>
+        <button id="confirmar">Confirmar</button>
+    </div>
+</body>
+</html>
