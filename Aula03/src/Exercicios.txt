@@ -1,0 +1,10 @@
+EXERCÍCIOS==========1) 
+CONTAS A PAGAREm um arquivo "contas.js", crie um array de contas. O array devemanter objetos de conta, com a estrutura exemplificada abaixo:
+
+{ "id": 1, "descricao": "Energia", "valor": 150.00, "tipo": "P", "finalizada": true }
+
+Considere "P" para conta a pagar e "R" para conta a receber.
+
+a) Em um arquivo contas.html, crie uma tabela capaz de exibir as contas.   (Crie algumas contas fictícias para isso). O arquivo deve carregar o   script "index.js", que deve utilizar as funções disponíveis em "contas.js".
+
+b) Crie um formulário para criar uma nova conta, acima da tabela.   O formulário deve permitir adicionar um objeto ao array de contas e   exibir a nova conta na tabela. 

@@ -1,0 +1,5 @@
+input:not([type="checkbox"]),
+select,
+button {
+  display: block;
+}
