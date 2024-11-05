@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contas</title>
+    <script src="./src/index.js" type="module" ></script>
+    <link rel="stylesheet" href="contas.css" />
+</head>
+<body>
+    <h1>Contas 2</h1>
+    <form>
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" autofocus />
+        <label for="valor">Valor:</label>
+        <input type="number" id="valor" />
+        <label for="tipo">Tipo:</label>
+        <select id="tipo">
+            <option value="P" selected >Pagar</option>
+            <option value="R" >Receber</option>
+        </select>
+        <input type="checkbox" id="finalizada" value="1" />
+        <label for="finalizada">Finalizada</label>
+        <button type="submit">Adicionar</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Descrição</th>
+                <th>Valor (R$)</th>
+                <th>Tipo</th>
+                <th>Finalizada</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+</html>

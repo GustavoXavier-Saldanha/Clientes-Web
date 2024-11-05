@@ -1,0 +1,7 @@
+input:not([type="checkbox"]),select,button {
+    display: block;
+}
+
+tbody tr td:last-child {
+    cursor: pointer;
+}

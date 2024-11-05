@@ -6,9 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="iife.js" ></script>
-    <script>
-
+    <script type="module" >
+        import * as o from './03.js';
+        o.ola( o.NOME_PADRAO );
+        console.log( o.x );
+        // x++;
+        o.incX();
+        console.log( o.x );
     </script>
 </body>
 </html>

@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-  <bodk>
+</head>
+<body>
     <script>
-      var x = 10;
-      let y = 20;
-    </script>
-    <script>
-      console.log("x: ", x);
-      console.log("y: ", y);
-
-      console.log("window.x: ", window.x);
-      console.log("window.y: ", window.y);
-    </script>
-
-    <script type="module">
-      var j = 10;
-      let k = 20;
+        var x = 10;
+        let y = 20;
     </script>
     <script>
-      console.log("j: ", j);
-      console.log("k: ", k);
-
-      console.log("window.j: ", window.j);
-      console.log("window.k: ", window.k);
+        console.log( 'var x',       x );
+        console.log( 'window.x',    window.x );
+        console.log( 'let y',       y );
+        console.log( 'window.y',    window.y );
     </script>
-  </bodk>
+
+    <script type="module" >
+        var j = 10;
+        let k = 20;
+    </script>
+    <script>
+        console.log( 'var j',       j );
+        console.log( 'window.j',    window.j );
+        console.log( 'let k',       k );
+        console.log( 'window.k',    window.k );
+    </script>
+</body>
 </html>

@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-  <body>
-    <script type="module">
-      import { ola, NOME_PADRAO } from "./03.js";
-      ola(NOME_PADRAO);
+</head>
+<body>
+    <script type="module" >
+        import { ola, NOME_PADRAO, x, incX }
+            from './03.js';
+        ola( NOME_PADRAO );
+        console.log( x );
+        // x++;
+        incX();
+        console.log( x );
     </script>
-  </body>
+</body>
 </html>
