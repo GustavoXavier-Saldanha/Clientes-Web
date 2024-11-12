@@ -2,10 +2,14 @@ input:not([type="checkbox"]),select,button {
     display: block;
 }
 
-tbody tr td:last-child {
+/* tbody tr td:last-child {
+    cursor: pointer;
+} */
+
+tbody {
     cursor: pointer;
 }
 
-.marked {
-    background-color: #259393dd;
+.marcado {
+    background-color: lemonchiffon;
 }

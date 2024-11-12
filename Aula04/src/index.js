@@ -1,22 +1,10 @@
-import {
-  adicionar,
-  carregarContas,
-  deleteRows,
-  desenharContas,
-  marcar,
-} from "./contas.js";
+import { adicionar, carregarContas, desenharContas, remover } from "./contas.js";
 
-document.addEventListener("DOMContentLoaded", iniciar);
+document.addEventListener( 'DOMContentLoaded', iniciar );
 
 function iniciar() {
-  console.log("teste1");
+    document.getElementsByTagName( 'button' ).item( 0 ).addEventListener( 'click', adicionar );
+    document.getElementById( 'remover' ).addEventListener( 'click', remover );
 
-  const botao = document.getElementsByTagName("button").item(0);
-  botao.addEventListener("click", adicionar);
-
-  const botaoDelete = document.getElementById("deleteButton");
-  botaoDelete.addEventListener("click", deleteRows);
-
-  console.log("contas: ", carregarContas());
-  desenharContas(carregarContas());
+    desenharContas( carregarContas() );
 }

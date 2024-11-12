@@ -1,0 +1,28 @@
+EXERCÍCIOS
+
+1) Faça o botão "Adicionar" fazer com que a nova conta seja exibida na tabela.
+
+2) Gere um id para uma conta adicionada, calculando o maior id + 1.
+
+3) Acrescente a possibilidade de marcar/desmarcar uma linha da tabela, ao clicar.
+   DICAS:
+    - Faça uma classe (regra) CSS "marcada" que represente a marcação
+      da linha.
+    - Controle a marcação da linha pela adição/remoção da classe CSS, pelo clique.
+      (lembrete: use a propriedade classList do elemento)
+    - Pode-se registrar o clique na linha, ao criá-la. 👈
+
+4) Acrescente o botão "Remover" abaixo da tabela, para que seja possível
+   remover o item selecionado da tabela, também do localStorage. Para isso,
+   considere modificar cada linha para guardar o id da conta a ser removida
+   e utilizar esse id para procurar e remover a conta.
+
+5) Acima da tabela, crie uma caixa de pesquisa com um botão "Pesquisar", que
+   permita pesquisar uma conta pela sua descrição. Quando isso ocorrer, apenas
+   as contas que CONTÉM o texto informado devem ser exibidas.
+
+6) Faça com que ao selecionar uma linha, a conta seja exibida na tabela.
+
+7) Modifique o botão "Adicionar" para "Salvar" e faça com que seja
+   possível alterar uma conta anteriormente marcada para exibição no
+   formulário.
