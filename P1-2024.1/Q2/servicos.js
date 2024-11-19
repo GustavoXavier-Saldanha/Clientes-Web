@@ -57,8 +57,8 @@ const footerController = (data) => {
   let duracaoTotal = 0;
 
   for (const d of data) {
-    if (d.valor > maiorVlor) {
-      maiorVlor = d.valor;
+    if (d.valor > maiorValor) {
+        maiorValor = d.valor;
     }
     duracaoTotal += d.duracao;
   }
