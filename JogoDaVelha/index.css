@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.corpoJogo {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  gap: 3px;
+  padding: 4px;
+}
+
+.corpoJogo div {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(106, 124, 124);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.corpoJogo div:hover {
+  background-color: rgb(152, 167, 167);
+}
+
+.disable {
+  cursor: not-allowed;
+  pointer-events: none;
+}

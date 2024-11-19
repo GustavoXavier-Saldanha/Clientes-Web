@@ -1,6 +1,6 @@
 # Programação de Clientes Web
 
-Para rodar os códigos é necessário rodar um servidor loca, utilizando o comando:
+Para rodar os códigos é necessário rodar um servidor local, utilizando o comando:
 
 npx http-server . -p 8080
 
