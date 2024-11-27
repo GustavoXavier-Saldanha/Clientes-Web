@@ -3,7 +3,7 @@ export function carregarContas() {
   if (!contas) {
     return [];
   }
-  return JSON.parse(contas); // string para JSON (array)
+  return JSON.parse(contas);
 }
 
 export function salvarContas(contas) {
@@ -37,11 +37,9 @@ export function adicionar(event) {
   contas.push(conta);
   salvarContas(contas);
 
-  // Adiciona a linha na tabela
   const tbody = document.body.querySelector("tbody");
   tbody.appendChild(criarLinha(conta));
 
-  // Limpa o formulário e coloca o foco na descrição
   document.querySelector("form").reset();
   document.querySelector("#descricao").focus();
 }
@@ -60,11 +58,10 @@ export function desenharContas(contas) {
   const tbody = document.body.querySelector("tbody");
   tbody.innerText = "";
   contas.map((c) => criarLinha(c)).forEach((tr) => tbody.appendChild(tr));
-  // contas.map(criarLinha).forEach(tbody.appendChild);
 }
 
 function criarLinha(conta) {
-  const tr = document.createElement("tr"); // table row
+  const tr = document.createElement("tr");
   tr.append(
     criarCelula(conta.id),
     criarCelula(conta.descricao),
@@ -80,7 +77,7 @@ function criarLinha(conta) {
 }
 
 function criarCelula(texto) {
-  const td = document.createElement("td"); // table data
+  const td = document.createElement("td");
   td.innerText = texto;
   return td;
 }
@@ -88,22 +85,6 @@ function criarCelula(texto) {
 function linhaClicada(event) {
   const td = event.target;
   const tr = td.parentElement;
-  console.log(tr);
-  const id = tr.dataset.id;
-  console.log(id);
-
-  const tds = tr.querySelectorAll("td");
-  console.log("tds: ", tds);
-
-  const contentData = {
-    id: tr.dataset.id,
-    descricao: tr.dataset.descricao,
-    valor: tr.dataset.valor,
-    tipo: tr.dataset.tipo,
-    finalizada: tr.dataset.finalizada,
-  };
-
-  console.log("Data:", contentData);
 
   tr.classList.toggle("marcado");
 }
@@ -114,13 +95,9 @@ export function remover(event) {
     alert("Por favor, seleciona uma linha.");
     return;
   }
-
-  // OPCIONAL
   if (!confirm("Deseja mesmo remover ?")) {
     return;
   }
-
-  // const id = tr.firstChild.innerText;
   const id = tr.dataset.id;
   removeContaPeloId(id);
 
@@ -129,22 +106,13 @@ export function remover(event) {
 
 function removeContaPeloId(id) {
   const contas = carregarContas();
-  //   let indice = -1;
-  //   for (const i in contas) {
-  //     const c = contas[i];
-  //     if (c.id == id) {
-  //       indice = i;
-  //       break;
-  //     }
-  //   }
 
   const indice = contas.findIndex((c) => c.id == id);
 
   if (indice < 0) {
-    return; // Não encontrou
+    return; 
   }
   contas.splice(indice, 1);
-  // Salvo novamente
   salvarContas(contas);
 }
 

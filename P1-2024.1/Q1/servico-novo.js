@@ -22,8 +22,8 @@ const submit = (e) => {
     div.innerText = error;
     return;
   }
-  const localData = JSON.parse(localStorage.getItem("servicos"));
-  let arr = localStorage.lenght > 0 ? localData : [];
+  const localData = localStorage.getItem("servicos");
+  let arr = localData.length > 0 ? JSON.parse(localData) : [];
 
   arr.push(data);
 
