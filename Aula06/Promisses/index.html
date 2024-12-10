@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promisses</title>
+  </head>
+  <body>
+    <output> </output>
+    <button id="carregar">Carregar</button>
+    <script>
+      carregar.onclick = () => {
+        const promisse = fetch("data.txt")
+          .then((response) => {
+            return response.text()
+          })
+          .then((text) => {
+              document.querySelector("output").innerText = text;
+              console.log(text);
+            })
+          .catch((err) => {
+            console.log(err);
+          });
+        console.log(promisse);
+      };
+    </script>
+  </body>
+</html>
