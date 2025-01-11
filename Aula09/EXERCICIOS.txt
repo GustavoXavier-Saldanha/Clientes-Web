@@ -1,0 +1,3 @@
+Crie uma barra de pesquisa que filtre o conteúdo das
+tarefas pela descrição e exiba apenas aquelas que
+contenham parte da mesma.

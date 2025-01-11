@@ -1,0 +1,22 @@
+RIFA DE CARNAVAL
+================
+
+Crie uma aplicação que cadastre presentes de uma
+rifa de Carnaval. Um presente deve ter "id", "descricao"
+ e "preco".
+
+1) Faça a listagem de presentes.
+
+2) Adicione um botão Sortear que sorteia um presente
+   da lista, pela sua posição. Esse presente será doado
+   a uma instituição assistencial e, portanto, deverá
+   ser removido da lista, após a mensagem ser exibida.
+
+3) Adicione imagens aos presentes. Para isso, pesquise
+   imagens para os presentes na Internet e salve
+   em uma pasta /img (ex. "01.jpg", "02.jpg", ...). Então,
+   adicione a propriedade "imagem" aos presentes, apontando
+   para a respectiva imagem. Após obter cada presente,
+   recupere sua imagem do servidor.
+
+4) Adicione o cadastro de um presente.

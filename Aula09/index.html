@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas</title>
+    <script src="src/tarefas.js" type="module" defer ></script>
+    <style>
+        a[href="cadastro.html"] {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13.333px;
+            text-decoration: none;
+            background-color: rgb(240, 240, 240);
+            color: black;
+            border-radius: 3px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 2.4px;
+            padding-bottom: 2.4px;
+            border: 1px solid gray;
+        }
+
+        tbody {
+            cursor: pointer;
+            user-select: none;
+        }
+        .selecionado {
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tarefas</h1>
+    <menu>
+        <a href="cadastro.html" >Cadastro</a>
+        <button id="remover" >Remover</button>
+        <button id="alterar">Alterar</button>
+    </menu>
+    <label for="pesquisa">Pesquisa:</label>
+    <input type="search" id="pesquisa">
+    <button id="pesquisar">Pesquisar</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Descrição</th>
+                <th>Feita</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <dialog>
+        <form method="dialog" >
+            <input type="hidden" id="id" />
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao" />
+            <input type="checkbox" id="feita" />
+            <label for="feita">Feita</label>
+            <button id="salvar" >Salvar</button>
+            <button id="cancelar">Cancelar</button>
+        </form>
+    </dialog>
+</body>
+</html>

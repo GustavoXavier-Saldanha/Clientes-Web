@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rifa de Presentes de Carnaval</title>
+    <script src="src/index.js" type="module" defer ></script>
+</head>
+<body>
+    <h1>Rifa de Presentes de Carnaval</h1>
+    <menu>
+        <button id="sortear" >Sortear</button>
+        <button id="cadastrar" >Cadastrar</button>
+    </menu>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Descrição</th>
+                <th>Preço (R$)</th>
+                <th>Imagem</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <dialog>
+        <form method="dialog" >
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao" />
+            <label for="preco">Preço:</label>
+            <input type="number" id="preco" />
+            <button id="salvar">Salvar</button>
+            <button id="cancelar">Cancelar</button>
+        </form>
+    </dialog>
+</body>
+</html>
