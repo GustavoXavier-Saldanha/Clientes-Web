@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+<body>
+    <output></output>
+    <button id="carregar" >Carregar</button>
+    <script>
+        carregar.onclick = () => {
+            const promessa = fetch( 'nome.txt' );
+            promessa.then( ( response ) => {
+                console.log( response.status );
+                const promessaTexto = response.text();
+                promessaTexto.then( texto => {
+                    document.querySelector( 'output' ).innerText = texto;
+                } );
+            } );
+            promessa.catch( ( erro ) => {
+                console.error( erro );
+            } );
+            console.log( promessa );
+        };
+    </script>
+</body>
+</html>

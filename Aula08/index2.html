@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+<body>
+    <output></output>
+    <button id="carregar" >Carregar</button>
+    <script>
+        carregar.onclick = () => {
+            fetch( 'nome.txt' )
+                .then( ( response ) => {
+                    console.log( response.status );
+                    response.text()
+                        .then( texto => {
+                            document.querySelector( 'output' ).innerText = texto;
+                        } );
+                } )
+                .catch( ( erro ) => {
+                    console.error( erro );
+                 } );
+        };
+    </script>
+</body>
+</html>

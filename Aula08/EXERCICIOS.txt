@@ -1,0 +1,10 @@
+1) Crie uma classe Autor que contenha nome e sobrenome e
+   utilize o padrão Builder para iniciar seus atributos.
+   Crie nela também um método estático que pode ser
+   usado como construtor.
+
+2) Adicione um método comoCitacao() que retorna o nome e
+   o sobrenome do autor, na forma:
+   "SOBRENOME, Nome"
+   Isso é, com o sobrenome em letras maiúsculas, seguido
+   de vírgula e do nome.

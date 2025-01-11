@@ -1,0 +1,42 @@
+EXERCÍCIOS
+
+1) Crie uma propriedade sem atributo chamada "numeroCompleto" que retorne
+o telefone formatado como nesse exemplo: (22) 99998888
+
+2) Faça o setter da propriedade acima para atribuir o número completo às
+outras propriedades existentes (ddd e numero). Exemplo:
+telefone.numeroCompleto = "(22) 22334455";
+
+3) Crie um arquivo "pessoa.js" contendo uma classe pessoa com os atributos
+"nome" e "cpf". Crie propriedades - com getter e setter - para ambos,
+considerando as seguintes regras:
+ - Se o nome informado no setter não contiver entre 2 e 100 caracteres,
+   ele não deve ser atribuído ao atributo.
+ - Quaisquer caracteres não numéricos devem ser removidos do CPF antes
+   da atribuição. Ex.: "123.456.980-12" -> atribui como "12345698012".
+Obs.: Use atributos privados.
+
+4) Crie uma exceção para sinalizar erros de produto, em um arquivo próprio.
+   Em seguida, modifique a classe Produto (criada anteriormente), para
+   verificar se seus valores de "estoque" e "preco" estão dentro da faixa
+   esperada:
+    - estoque deve estar entre 0 e 10_000
+    - preco deve estar entre 0.01 e 1_000.00
+
+5) Crie um arquivo "dado.js", com uma classe Dado que contenha um método
+   jogar() e um construtor que receba o número de lados.
+   O método jogar() deve retornar um número entre 1 e número de lados,
+   incluindo ambos. Por exemplo, ao instanciar um dado com 6 lados, o
+   método jogar() deve retornar um número de 1 a 6.
+
+    DICA:
+    function randomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+6) Crie uma arquivo "dado-com-memoria.js" com uma classe DadoComMemoria,
+   que estende a classe Dado criada anteriormente. Em seu construtor,
+   ela deve receber, opcionalmente, quantas jogadas ele deve memorizar.
+   Ao jogar, ele deve gerar um lado aleatoriamente, memorizar e retornar.
+   Crie uma propriedade "jogadas", para permitir obter as jogadas memorizadas,
+   e um método limpar() para limpar a memória.
