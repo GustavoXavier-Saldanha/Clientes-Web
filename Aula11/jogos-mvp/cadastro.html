@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+    <script type="module" src="src/visao-jogo.js" defer ></script>
+</head>
+<body>
+    <h1>Cadastro de Jogo</h1>
+    <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" />
+        <label for="ano">Ano de Lançamento:</label>
+        <input type="text" id="ano" />
+        <label for="desenvolvedora">Desenvolvedora: </label>
+        <input type="text" id="desenvolvedora" list="devs" />
+        <datalist id="devs" >
+            <option>Rare</option>
+            <option>From Software</option>
+            <option>RockStar Games</option>
+            <option>Take Two</option>
+            <option>Insomniac</option>
+            <option>Microsoft</option>
+            <option>Akklain</option>
+            <option>Square</option>
+            <option>Blizzard</option>
+            <option>Valve</option>
+        </datalist>
+        <label for="nota">Nota:</label>
+        <input type="range" min="1" max="5" value="3" id="nota"
+            onchange="valorNota.innerText = nota.value"/>
+        <span id="valorNota" >3</span>
+        <button>Cadastrar</button>
+        <output></output>
+    </form>
+</body>
+</html>

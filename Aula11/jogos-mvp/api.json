@@ -1,0 +1,17 @@
+{
+  "jogos": [
+    {
+      "id": "1",
+      "nome": "Red Dead Redemption 2",
+      "anoLancamento": 2018,
+      "desenvolvedora": "RockStar Games"
+    },
+    {
+      "id": "a101",
+      "nome": "Path of Exile 2",
+      "anoLancamento": 2024,
+      "desenvolvedora": "Grind Gear Games",
+      "nota": 5
+    }
+  ]
+}
