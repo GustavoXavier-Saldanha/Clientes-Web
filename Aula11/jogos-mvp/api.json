@@ -12,6 +12,20 @@
       "anoLancamento": 2024,
       "desenvolvedora": "Grind Gear Games",
       "nota": 5
+    },
+    {
+      "id": "058c",
+      "nome": "",
+      "anoLancamento": 0,
+      "desenvolvedora": "",
+      "nota": 3
+    },
+    {
+      "id": "f0c0",
+      "nome": "gdf",
+      "anoLancamento": null,
+      "desenvolvedora": "sdg",
+      "nota": 4
     }
   ]
 }

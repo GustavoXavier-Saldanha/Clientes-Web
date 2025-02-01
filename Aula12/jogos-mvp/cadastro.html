@@ -7,8 +7,9 @@
     <script type="module" src="src/visao-jogo.js" defer ></script>
 </head>
 <body>
+    <a href="index.html" >Jogos</a>
     <h1>Cadastro de Jogo</h1>
-    <form style="display: flex; flex-direction: column; width: 200px;">
+    <form>
         <label for="nome">Nome:</label>
         <input type="text" id="nome" />
         <label for="ano">Ano de Lançamento:</label>
@@ -34,5 +35,13 @@
         <button>Cadastrar</button>
         <output></output>
     </form>
+    <style>
+        input:not([type="range"]), button {
+            display: block;
+        }
+        button {
+            margin-top: 2rem;
+        }
+    </style>
 </body>
 </html>

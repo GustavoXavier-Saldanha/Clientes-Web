@@ -1,0 +1,20 @@
+1) Crie uma Single-Page Application de uma aplicação para controle de filmes.
+   A SPA deve conter:
+
+a) Uma página inicial, em "/home" ou "/filmes", que mostra a listagem de filmes.
+b) Uma página em "/filmes/novo", que cadastra um filme.
+
+c) Modifique a página de cadastro para conter um campo de busca em que seja possível
+   pesquisar o nome de um filme no Open Movie Database (OMDB), https://www.omdbapi.com/,
+   e obter a imagem correspondente, caso encontrado. Por exemplo, ao pesquisar por
+   "The Matrix", deve ser exibida a imagem do filme (que está na propriedade "Poster").
+   A URL da imagem do filme, caso encontrado, deve ser salva junto com o filme cadastrado.
+
+d) Crie uma página para alterar um filme, cujo id deve ser passado na URL.
+
+
+[...]
+
+A aplicação deve interagir com uma API RESTful, que mantém os filmes com
+os seguintes dados, no formato JSON: nome, ano, nota e imagem (entra na letra C).
+Usar json-server para o servidor.

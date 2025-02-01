@@ -4,5 +4,9 @@ Para rodar os códigos é necessário rodar um servidor local, utilizando o coma
 
 npx http-server . -p 8080
 
+\*Execução do serviço para teste
+´
+pnpm exec json-server api.json
+´
 
 ## CEFET-RJ, Sistemas de Informação

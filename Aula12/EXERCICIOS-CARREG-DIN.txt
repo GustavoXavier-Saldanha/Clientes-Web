@@ -1,0 +1,5 @@
+1) Faça uma página contendo dois campos para lançar números e
+   os botões de Multiplicar e Dividir.
+   Os comportamentos relacionados devem ser carregados dinamicamente
+   de dois arquivos, "multiplicacao.js" e "divisao.js".
+   A função de "divisao.js" deve ser exportada de forma default.

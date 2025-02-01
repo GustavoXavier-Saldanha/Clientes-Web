@@ -1,0 +1,14 @@
+1) Crie um campo (select) para que o usuário informe a operação desejada
+   no cálculo: Adição (+), Subtração (-), Multiplicação (*) ou Divisão (/).
+   Ajuste o modelo para que possua uma função calcular() que receba os números
+   e o operador correspondente.
+
+2) Crie um controle de jogos que você já jogou.
+a) Primeiro, construa o cadastro de um jogo, com os seguintes dados:
+   - Nome
+   - Ano de Lançamento
+   - Desenvolvedora
+   - Nota (1-5)
+b) Então, uma listagem dos jogos.
+c) Desenvolva uma forma de remover um jogo.
+d) Desenvolva a alteração de um jogo.
