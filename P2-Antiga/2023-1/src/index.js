@@ -18,14 +18,18 @@ async function salvarItem(event) {
   const descricao = document.getElementById("descricao").value;
   const estoque = document.getElementById("estoque").value;
   const resultado = document.getElementById("resultado");
+  const errors = [];
 
   if (descricao.length < 2 || descricao.length > 100) {
-    resultado.innerText = "Descrição deve ter entre 2 e 100 caracteres.";
-    return;
+    errors.push("Descrição deve ter entre 2 e 100 caracteres.");
   }
 
   if (!Number.isInteger(Number(estoque)) || Number(estoque) <= 0) {
-    resultado.innerText = "Estoque deve ser um número inteiro positivo.";
+    errors.push("Estoque deve ser um número inteiro positivo.");
+  }
+
+  if (errors.length > 0) {
+    resultado.innerText = errors.join("\n");
     return;
   }
 
@@ -42,8 +46,9 @@ async function salvarItem(event) {
 
   if (navigator.onLine) {
     try {
-      await salvarItemNoServidor(item);
-      item.salvo = true;
+      const response =await salvarItemNoServidor(item);
+      const itemSalvo = itens.find((i) => i.id === item.id);
+      itemSalvo.salvo = true;
       localStorage.setItem("itens", JSON.stringify(itens));
       resultado.innerText = "Item salvo com sucesso!";
     } catch (error) {
@@ -65,7 +70,8 @@ async function salvarItemNoServidor(item) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(item),
-  });
+  }
+);
 
   if (!response.ok) {
     throw new Error("Erro ao salvar item no servidor.");
@@ -91,7 +97,7 @@ function atualizarRodape() {
 
 async function carregarItensDoServidor() {
   try {
-    const response = await fetch("https://exemplo.com:88/itens");
+    const response = await fetch("https://exemplo.com:80/itens");
     const itens = await response.json();
     const itensComSalvo = itens.map((item) => ({ ...item, salvo: true }));
     localStorage.setItem("itens", JSON.stringify(itensComSalvo));
@@ -110,6 +116,7 @@ function carregarItensDoLocalStorage() {
 function sincronizarItensNaoSalvos() {
   const itens = JSON.parse(localStorage.getItem("itens")) || [];
   const itensNaoSalvos = itens.filter((item) => !item.salvo);
+  const itensSalvos = itens.filter((item) => item.salvo);
   const resultado = document.getElementById("resultado");
 
   Promise.all(
@@ -123,6 +130,7 @@ function sincronizarItensNaoSalvos() {
         })
     )
   ).then(() => {
-    localStorage.setItem("itens", JSON.stringify(itens));
+    const todosItens = [...itensSalvos, ...itensNaoSalvos];
+    localStorage.setItem("itens", JSON.stringify(todosItens));
   });
 }
